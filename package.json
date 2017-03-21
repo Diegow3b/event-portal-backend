@@ -1,0 +1,41 @@
+{
+  "name": "events-server",
+  "version": "0.0.0",
+  "description": "Node/Express Server to Events Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha -w app.js tests/test.js",
+    "start": "nodemon bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegow3b/events-crawling.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mocha",
+    "test",
+    "tdd"
+  ],
+  "author": "Diego Vinicius",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Diegow3b/events-crawling/issues"
+  },
+  "homepage": "https://github.com/Diegow3b/events-crawling#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "mongojs": "^2.4.0",
+    "slugify": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  }
+}
