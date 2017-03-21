@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "NODE_ENV=test mocha -w app.js tests/test.js",
-    "start": "nodemon bin/www"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
