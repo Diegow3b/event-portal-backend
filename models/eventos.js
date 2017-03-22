@@ -66,6 +66,10 @@ exports.update = (id, evento, callback) => {
     db.eventos.update({ _id: mongojs.ObjectId(id) }, evento, {},(err, evento) => {
         if (err) 
             return callback(err);
-        return callback(null, evento);
+        db.eventos.find({ _id: mongojs.ObjectId(id) }, (err, filterEvento) => {
+            evento.evento = filterEvento;
+            return callback(null, evento);
+        });
+        
     });
 };
