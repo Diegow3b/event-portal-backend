@@ -7,6 +7,7 @@ var session = require('express-session');
 var index = require('./routes/index');
 var eventos = require('./routes/eventos');
 var users = require('./routes/users');
+var timeline = require('./routes/timeline');
 
 var app = express();
 
@@ -53,5 +54,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', index);
 app.use('/api/eventos', eventos);
 app.use('/api/users', users);
+app.use('/api/timeline', timeline);
 
 module.exports = app;
