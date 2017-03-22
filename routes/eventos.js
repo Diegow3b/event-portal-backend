@@ -91,17 +91,6 @@ router.route('/:id')
 
             timelineController.addLog(obj.evento[0].title, "edit", "Evento");
 
-            // timelineLog.insert({
-            //     name: evento.title,
-            //     action: "edit",
-            //     model: "Evento",
-            //     date: new Date(),
-            //     body: "This document has been edited"
-            // }, (err, evento) => {
-            //     if (err) throw err;
-            //     // res.status(201).json(evento);
-            // });
-
             res.json(evento);            
         });
 
