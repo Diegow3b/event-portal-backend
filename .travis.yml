@@ -4,3 +4,9 @@ node_js:
 deploy:
   app: event-portal-backend
   provider: heroku
+
+before_install:
+  - apt-get install make
+  - npm i touch@latest
+  - npm i bcrypt --save
+  
