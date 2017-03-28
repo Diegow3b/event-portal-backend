@@ -9,9 +9,9 @@ notifications:
   email: false
 deploy:
   app: event-portal-backend
-  provider: heroku
-  api_key:
-    secure: *key*
+  #provider: heroku
+  #api_key:
+  #  secure: *key*
   on:
     tags: true  
 skip_cleanup: true
