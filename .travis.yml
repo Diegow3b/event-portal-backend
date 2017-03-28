@@ -3,6 +3,8 @@ dist: trusty
 sudo: required
 node_js:
   - "7"
+notifications:
+  email: false
 deploy:
   app: event-portal-backend
   provider: heroku
