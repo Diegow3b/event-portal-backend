@@ -1,8 +1,10 @@
 language: node_js
+node_js:
+  - "6"
+  - "7"
+  
 dist: trusty
 sudo: required
-node_js:
-  - "7"
 notifications:
   email: false
 deploy:
@@ -12,7 +14,7 @@ deploy:
     secure: *key*
   on:
     tags: true  
-    
+skip_cleanup: true
 branches:
   only:
     - master
