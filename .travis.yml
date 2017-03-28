@@ -12,6 +12,10 @@ deploy:
     secure: *key*
   on:
     tags: true  
+    
+branches:
+  only:
+    - master
 
 before_install:
   - npm i touch@latest
