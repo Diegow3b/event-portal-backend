@@ -8,6 +8,10 @@ notifications:
 deploy:
   app: event-portal-backend
   provider: heroku
+  api_key:
+    secure: *key*
+  on:
+    tags: true  
 
 before_install:
   - npm i touch@latest
