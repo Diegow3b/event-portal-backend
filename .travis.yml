@@ -4,4 +4,4 @@ node_js:
 env:
     - NODE_ENV=development
     - NODE_ENV=production
-    - MY_SECRET=secret
+    - NODE_ENV=test
