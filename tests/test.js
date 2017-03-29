@@ -21,10 +21,10 @@ describe('Requests to the root path', () => {
             .expect(200, done)
     });
 
-    it('Returns a HTML format', (done) => {
+    it('Returns a TEXT format', (done) => {
         request(app)
             .get('/')
-            .expect('Content-Type', /html/, done)
+            .expect('Content-Type', /text/, done)
     });
 
 });
