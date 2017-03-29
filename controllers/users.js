@@ -1,7 +1,8 @@
 var bcrypt = require('bcrypt');
+var SALT_WORK_FACTOR = 10;
 
 exports.cryptPassword = (password, callback) => {
-   bcrypt.genSalt(10, (err, salt) => {
+   bcrypt.genSalt(SALT_WORK_FACTOR, (err, salt) => {
     if (err) 
       return callback(err);
 

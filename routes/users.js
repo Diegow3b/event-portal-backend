@@ -1,6 +1,8 @@
 var express = require('express');
 var controller = require('../controllers/users');
 var model = require('../models/users');
+var jwt = require('jsonwebtoken');
+var jwtSecret = 'f12lf1lk2flk1lj2kf';
 
 const router = express.Router();
 
@@ -22,14 +24,7 @@ router.route('/')
 
         if(!controller.isValid(req)){
             return next(res.status(400).json({"error": "Bad Data"}));
-        }        
-
-        if (!user.end_date) user.end_date = user.start_date;
-
-        controller.cryptPassword(user.password, (err, password) => {
-            if(err) throw err;
-            user.password = password;
-        });                
+        }                           
 
         model.insert(user, (err, user) => {
             if(err) throw err;
@@ -75,5 +70,20 @@ router.route('/name/:slug')
             res.json(user);
         });
     })
+
+router.route('/login')
+
+    .post(model.login, (req, res) => {
+        var token = jwt.sign({ username: req.body.username }, jwtSecret);
+        res.status(200).send({ token: token, username: req.body.username, status: 200 });
+    });
+
+router.route('/logout')
+
+    .get((req, res) => {
+        /**
+         * 
+         */
+    });
 
 module.exports = router;
