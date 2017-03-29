@@ -44,7 +44,7 @@ router.route('/')
             // });
 
             
-            res.status(201).json(evento);            
+            res.status(201).json(evento);
         });
 
     });
@@ -75,7 +75,7 @@ router.route('/:id')
             // });
 
 
-            res.sendStatus(204);            
+            res.sendStatus(204);
         });
     })
 
